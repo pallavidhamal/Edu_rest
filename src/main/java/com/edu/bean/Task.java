@@ -17,6 +17,11 @@ public class Task {
 	private Date CreatedDate = new Date();
 	private Date ModifiedDate = new Date();
 	
+	private int pOLineId ;
+	
+	private String authKey;
+	
+	private String instid;
 	
 	private List <Task> task1;
 	
@@ -44,11 +49,6 @@ public class Task {
 	public void setInstid(String instid) {
 		this.instid = instid;
 	}
-	private int pOLineId ;
-	
-	private String authKey;
-	
-	private String instid;
 	
 	public String getAuthKey() {
 		return authKey;

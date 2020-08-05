@@ -48,7 +48,7 @@ public class TaskServiceImp implements TaskService {
 		// TODO Auto-generated method stub
 		ObjectNode flag = taskDao.inactivateTask(task); 
 		return flag;	
-		}
+	}
 
 	@Override
 	public ObjectNode activateTask(Task task) {

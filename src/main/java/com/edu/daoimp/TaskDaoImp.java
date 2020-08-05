@@ -27,6 +27,7 @@ public class TaskDaoImp implements TaskDao {
 	GetDBConnection getConn = new GetDBConnection();
 	ObjectMapper objectMapper = new ObjectMapper();
 	
+	@SuppressWarnings("deprecation")
 	@Override
 	public ObjectNode getTasks(int userid) {
 		// TODO Auto-generated method stub
@@ -40,7 +41,7 @@ public class TaskDaoImp implements TaskDao {
 		//String sql = "Select * from task_master where IsDeleted = 'N' ";
 		//String sql = "Select * from task_master ";
 		
-		String sql = "Select * from test ";
+		String sql = "Select * from streams ";
 		
 			try
 			{
@@ -62,8 +63,8 @@ public class TaskDaoImp implements TaskDao {
 				 * 
 				 */
 					
-					objectInNode.put("TaskId", rs.getString("id"));
-					  objectInNode.put("TaskName", rs.getString("name"));
+//					objectInNode.put("TaskId", rs.getString("id"));
+					  objectInNode.put("TaskName", rs.getString("streamname"));
 					
 					arrayOutNode.add(objectInNode);
 				}

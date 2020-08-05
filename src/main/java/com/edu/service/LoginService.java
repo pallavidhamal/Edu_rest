@@ -1,20 +1,20 @@
-package com.edu.service;
+// package com.edu.service;
 
-import javax.servlet.http.HttpServletRequest;
+// import javax.servlet.http.HttpServletRequest;
 
-import com.edu.bean.User;
-import com.fasterxml.jackson.databind.node.ObjectNode;
+// import com.edu.bean.User;
+// import com.fasterxml.jackson.databind.node.ObjectNode;
 
-public interface LoginService {
+// public interface LoginService {
 
-	ObjectNode checkLoginCredential(User user,HttpServletRequest req);
+// 	ObjectNode checkLoginCredential(User user,HttpServletRequest req);
 
-	boolean checkEmailExistance (User user);
+// 	boolean checkEmailExistance (User user);
 	
-	ObjectNode checkSILoginCredential (User user);
+// 	ObjectNode checkSILoginCredential (User user);
 
-	ObjectNode changePswd(User user);
+// 	ObjectNode changePswd(User user);
 
-	boolean saveUserKey(User user);
+// 	boolean saveUserKey(User user);
 		
-}
+// }
