@@ -125,15 +125,17 @@ public class CollegeDaoImp implements CollegeDao {
 
 			conn = GetDBConnection.getConnection();
 
-			String SQL_QUERY = "INSERT INTO colleges (collegename, IsDeleted ,createdBy, createdDate) "
-					+ " VALUES (?,'N', '101', NOW())";
+			String SQL_QUERY = "INSERT INTO colleges (collegename, streams, IsDeleted ,createdBy, createdDate) "
+					+ " VALUES (?, ?,'N', '101', NOW())";
 
 			System.out.println("QUERY For insertCollege " + SQL_QUERY);
 
 			preparedStmt = conn.prepareStatement(SQL_QUERY);
 
 			preparedStmt.setString(1, college.getCollegename());
+			
 			System.out.println(preparedStmt.toString());
+			preparedStmt.setString(2, college.getStreams());
 
 			preparedStmt.executeUpdate();
 			flag = true;

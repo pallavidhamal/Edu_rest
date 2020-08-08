@@ -175,7 +175,7 @@ public class UserDaoImp implements UserDao {
 			conn = GetDBConnection.getConnection();
 			stmt = conn.createStatement();
 			System.out.println("Prepared Statement");
-			String query = "Update users set  usertype = ? ," + " updatedBy = '" + userId
+			String query = "Update users set  name = ? ," + " updatedBy = '" + userId
 					+ "' , updatedDate = NOW() where id = " + user.getId();
 
 			System.out.println("User Update query => " + query);
